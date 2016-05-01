@@ -8,13 +8,16 @@
         <script data-main="scripts/main" src="scripts/require.js"></script>
     </head>
     <body>
-        <h1>My Sample Requirejs Project</h1>
+        <h4>My Sample Requirejs Project</h4>
+        <p>Look console for output </p>
     </body>
     <script type="text/javascript">
     	
     	require (['helper/util'], function (util) {
 
-    		console.log ('d');
+    		__myApp.set ('Apache');
+
+    		console.log (__myApp.get ());
     	});
     </script>
 </html>
