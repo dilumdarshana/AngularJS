@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Sample Requirejs Project</title>
-        <!-- data-main attribute tells require.js to load
-             scripts/main.js after require.js loads. -->
-        <script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script>     
-        <script data-main="scripts/main" src="scripts/require.js"></script>
+        <title>My Sample Requirejs Project</title>        
     </head>
     <body>
-        <h4>My Sample Requirejs Project</h4>
-        <p>Look console for output </p>
+        <h4>Notes:</h4>
+        <p>Requirejs include has data tag 'data-main' which is a JS file loads as soon as require.js loads</p>
+        <p>Requirejs doesn't need '.js' extension at all on file calls</p>
     </body>
     <script type="text/javascript">
-    	
-    	require (['helper/util'], function (util) {
+    	require (['config'], function (util) {
 
-    		__myApp.set ('Apache');
-
-    		console.log (__myApp.get ());
+    		require (['helper/util'], function (util) {
+    			console.log (__myApp.get ());
+    		});
     	});
     </script>
+    <script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script>     
+    <script data-main="scripts/config" src="scripts/require.js"></script>
 </html>

@@ -19,7 +19,4 @@
 
 })(jQuery);
 
-//$(document).ready (function () {
-
-	var __myApp = new $.myApp ();
-//});
+var __myApp = new $.myApp ();
