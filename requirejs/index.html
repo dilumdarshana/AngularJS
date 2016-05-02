@@ -8,6 +8,7 @@
         <p>Requirejs include has data tag 'data-main' which is a JS file loads as soon as require.js loads</p>
         <p>Requirejs doesn't need '.js' extension at all on file calls</p>
     </body>
+    <script data-main="js/config" src="js/lib/require.js"></script>
     <script type="text/javascript">
     	require (['config'], function (util) {
 
@@ -15,7 +16,5 @@
     			console.log (__myApp.get ());
     		});
     	});
-    </script>
-    <script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script>     
-    <script data-main="scripts/config" src="scripts/require.js"></script>
+    </script>    
 </html>

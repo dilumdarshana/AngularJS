@@ -2,7 +2,7 @@
 
 requirejs.config ({
 
-	baseUrl: 'scripts',
+	baseUrl: 'js/custom',
 	paths: {
 
 		jquery: [
