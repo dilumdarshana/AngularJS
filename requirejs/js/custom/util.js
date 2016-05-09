@@ -1,22 +1,27 @@
 "use stricts";
 
-(function ($) {
+var __myApp;
 
-	$.myApp = function () {
+define (['jquery'], function ($) {
 
-		this.name = 'Test';
+	(function ($) {
 
-		this.set = function (value) {
+		$.myApp = function () {
 
-			this.name = value;
+			this.name = 'Test';
+
+			this.set = function (value) {
+
+				this.name = value;
+			};
+
+			this.get = function () {
+
+				return this.name;
+			};
 		};
 
-		this.get = function () {
+	})(jQuery);
 
-			return this.name;
-		};
-	};
-
-})(jQuery);
-
-var __myApp = new $.myApp ();
+	__myApp = new $.myApp ();
+});

@@ -7,12 +7,13 @@
         <h4>Notes:</h4>
         <p>Requirejs include has data tag 'data-main' which is a JS file loads as soon as require.js loads</p>
         <p>Requirejs doesn't need '.js' extension at all on file calls</p>
+        <p>Use 'define' to </p>
     </body>
     <script data-main="js/config" src="js/lib/require.js"></script>
     <script type="text/javascript">
-    	require (['config'], function (util) {
+    	require (['config'], function () {
 
-    		require (['helper/util'], function (util) {
+    		require (['util'], function (util) {
     			console.log (__myApp.get ());
     		});
     	});
