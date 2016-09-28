@@ -3,5 +3,6 @@
 	- Requirejs doesn't need '.js' extension at all on file calls
 	- defind () function - look how loads util.js
 
-# Example 1
+# angularjs
+    
 	
