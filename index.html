@@ -5,18 +5,15 @@
     <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
     <link rel="stylesheet" href="style.css" />
     <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
-    <script src="script.js"></script>
+    <script data-require="angular-route@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="mainController.js"></script>
+    <script src="userController.js"></script>
     <script src="github.js"></script>
 </head>
 
-<body ng-controller="mainController">
-    <div class="text-danger">{{error}}</div>
-    <form class="form-group" name="githubUser">
-        <input type="search" required placeholder="Type Username" ng-model="username">
-        <input type="submit" value="Search" ng-click="search(username)">
-    </form>
-    
-    <div id="userDetails" ng-include="'userDetails.html'"></div>
+<body>
+    <div ng-view></div>
 </body>
 
 </html>
