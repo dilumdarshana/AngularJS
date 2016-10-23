@@ -5,9 +5,9 @@
     var mainController = function($scope, $location) {
 
         $scope.username = 'dilumdarshana';
-        
+
         $scope.search = function(username) {
-            
+
             $location.path("/user/" + username);
         };
     };

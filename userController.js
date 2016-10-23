@@ -6,11 +6,11 @@
 
         var onComplete = function (data) {
             $scope.user = data;
-            
+
             github.getRepos($scope.user)
                 .then(onRepos, onError);
         };
-        
+
         var onRepos = function(data) {
             $scope.repos = data;
         }
@@ -18,10 +18,10 @@
         var onError = function(err) {
             $scope.error = 'Could not connect to the remote URL';
         };
-        
+
         $scope.sortOrder = 'stargazers_count';
         $scope.username = $routeParams.username;
-        
+
         github.getUser($scope.username).then(onComplete, onError);
 
     };
